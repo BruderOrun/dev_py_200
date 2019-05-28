@@ -28,15 +28,15 @@
 
 
 
-# 4. Создайте класс GlassDefaultListArg (нужен только __init__) 
+# 4. Создайте класс GlassDefaultListArg (нужен только __init__)
 #    c аргументами capacity_volume, occupied_volume.
 #    Пусть аргументом по умолчанию для __init__ occupied_volume = []. Будет список.
 #    Попробуйте создать 3 объекта, которые изменяют occupied_volume.append(2) внутри __init__.
 #    Создавайте объект GlassDefaultListArg только с одним аргументом capacity_volume.
 #    Опишите результат.
 #    Подсказка: можно ли использовать для аргументов по умолчанию изменяемые типы?
-  
- 
+
+
 
 
 # 5. Создайте класс GlassAddRemove, добавьте методы add_water, remove_water
@@ -46,7 +46,7 @@
 
 
 
-# 6. Создайте три объекта типа GlassAddRemove, 
+# 6. Создайте три объекта типа GlassAddRemove,
 #    вызовите функцию dir для трёх объектов и для класса GlassAddRemove.
 #    а. Получите типы объектов и класса
 #    б. Проверьте тип созданного объекта.
@@ -73,27 +73,27 @@
 #     - соглашения о стиле кодирования
 #    Запустите код.
 
-class d:
-	def __init__(f, a=2):
-		f.a = a
-		
-	def print_me(p):
-		print(p.a)
-		
-d.print_me(d())		
+# class d:
+# 	def __init__(f, a=2):
+# 		f.a = a
+#
+# 	def print_me(p):
+# 		print(p.a)
+#
+# d.print_me(d())
 
 # 10. Исправьте
 class A:
 	def __init__(self, a):
 		if 10 < a < 50:
 			return
-		self.a = a;	
+		self.a = a;
 
 # Объясните так реализовывать __init__ нельзя?
-		
-        
-        
-        
+
+
+
+
 # 11. Циклическая зависимость (стр. 39-44)
 # 
 
@@ -106,10 +106,10 @@ class Node:
 
     def set_prev(self, prev):
         self.__prev = prev
-        
+
     def __str__(self):
         ...
-        
+
     def __repr__(self):
         ...
 
@@ -124,8 +124,10 @@ class LinkedList:
         index - position of node
         '''
         ...
-        
-       
+        LinkedList.append(node)
+
+
+
     def append(self, node):
         '''
         Append Node to tail of LinkedList
@@ -145,7 +147,7 @@ class LinkedList:
 
     def remove(self, node):
         ...
-        
+
     def delete(self, index):
         ...
 

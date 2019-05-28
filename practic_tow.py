@@ -57,8 +57,7 @@ class GlassDefaultListArg:
         self.capacity_volume = capacity_volume
         self.occupied_volume = occupied_volume
         self.occupied_volume.append(capacity_volume)
-        # self.x = input()
-        # self.occupied_volume.append(self.x)
+
 
 #
 # glassDefaultListAr_1 = GlassDefaultListArg(2)
@@ -77,26 +76,139 @@ class GlassDefaultListArg:
 
 
 class GlassAddRemove:
-    def __init__(self,occupied_volume=0,water=0):
+    def __init__(self, occupied_volume=0, water=0):
+        print(dir(self))
         self.occupied_volume = occupied_volume
+        print(dir(self))
         self.water = water
+        print(dir(self))
+        '''
+        По мере инициализации мы видим новые инициализированные переменные сперва occupied_volume, потом water
+        '''
 
-    def add_water(self):
-        self.occupied_volume+=self.water
+    def add_water(self, water):
+        self.occupied_volume += water
+        return self.occupied_volume
+
+    def remove_water(self, water):
+        self.occupied_volume -= water
         return self.occupied_volume
 
 
-    def remove_water(self):
-
-        pass
-
-glassAddRemove_1=GlassAddRemove(3,5)
+glassAddRemove_1 = GlassAddRemove(0, 20)
 # print(glassAddRemove_1.add_water())
-print(glassAddRemove_1.add_water())
-glassAddRemove_1.add_water()
-print(glassAddRemove_1.add_water())
-print(glassAddRemove_1.add_water())
+print(glassAddRemove_1.add_water(3))
+print(glassAddRemove_1.remove_water(3))
+glassAddRemove_2 = GlassAddRemove(1, 40)
+glassAddRemove_3 = GlassAddRemove(2, 60)
+
+print(glassAddRemove_1.__dir__())
+print(glassAddRemove_2.__dir__())
+print(glassAddRemove_2.__dir__())
+print(GlassAddRemove.__dir__(2))
+print(type(glassAddRemove_2))
+# print(isinstance(GlassAddRemove))
 
 
-def f():
-    ...
+glass_00 = Glass
+glass_01 = Glass
+glass_02 = Glass
+
+print(id(glass_00))
+print(id(glass_01))
+print(id(glass_02))
+
+
+# 9. Корректно ли следующее объявление класса с точки зрения:
+#     - интерпретатора Python;
+#     - соглашения о стиле кодирования
+#    Запустите код.
+class d:
+	def __init__(f, a=2):
+		f.a = a
+
+	def print_me(p):
+		print(p.a)
+
+d.print_me(d())
+'''
+Да корректно, хотя и с нарушениями pep 8
+'''
+# 10. Исправьте
+class A:
+	def __init__(self, a):
+		if 10 < a < 50:
+			return
+		self.a = a  #todo тут
+
+# Объясните так реализовывать __init__ нельзя?
+
+#todo Можно, но не нужно
+
+
+# 11 задание просто не понимаю.
+# Возникает масса вопросов по реализации, которые не уточнить
+
+
+# 11. Циклическая зависимость (стр. 39-44)
+#
+
+class Node:
+    def __init__(self, prev=None, next_=None):
+        self.__prev = prev
+        self.__next = next_
+    def set_next(self, next_):
+        self.__next = next_
+
+    def set_prev(self, prev):
+        self.__prev = prev
+
+    def __str__(self):
+        ...
+
+    def __repr__(self):
+        ...
+
+class LinkedList:
+
+
+
+    def insert(self, node, index=0):
+        '''
+        Insert Node to any place of LinkedList
+        node - Node
+        index - position of node
+        '''
+        ...
+        node = Node
+
+        return LinkedList.insert(index,node)
+
+
+
+
+    def append(self, node):
+        '''
+        Append Node to tail of LinkedList
+        node - Node
+        '''
+        node = Node
+        return LinkedList.append(node)
+
+    def clear(self):
+        '''
+        Clear LinkedList
+        '''
+        LinkedList.clear()
+
+
+    def find(self, node):
+        ...
+
+
+    def remove(self, node):
+        ...
+
+    def delete(self, index):
+        ...
+LinkedList.insert(3,5)
