@@ -148,7 +148,7 @@ class A:
 
 # 11 задание просто не понимаю.
 # Возникает масса вопросов по реализации, которые не уточнить
-
+#
 
 # 11. Циклическая зависимость (стр. 39-44)
 #
@@ -180,9 +180,20 @@ class LinkedList:
         index - position of node
         '''
         ...
-        node = Node
+        counter = 1
+        if index == 0:
+            node.setNext(self.head)
+            self.head = node
 
-        return LinkedList.insert(index,node)
+        else:
+            node = self.head
+            while node.next is not None:
+                if counter == index:
+                    node.setNext(node.next)
+                    node.setNext(node)
+                    return
+                node = node.next
+                counter = counter + 1
 
 
 
@@ -192,14 +203,15 @@ class LinkedList:
         Append Node to tail of LinkedList
         node - Node
         '''
-        node = Node
-        return LinkedList.append(node)
+        new_node = Node(node)
+        new_node.next = self.head
+        self.head = new_node
 
     def clear(self):
         '''
         Clear LinkedList
         '''
-        LinkedList.clear()
+
 
 
     def find(self, node):
@@ -211,4 +223,3 @@ class LinkedList:
 
     def delete(self, index):
         ...
-LinkedList.insert(3,5)

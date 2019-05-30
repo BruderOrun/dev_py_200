@@ -1,3 +1,4 @@
+# 7
 class Date:
     '''
     Date
@@ -84,7 +85,7 @@ class Date:
         return self.__day
 
     #     @day.setter
-    #     def day(self, value):-
+    #     def day(self, value):
     #         value = int(value)
     #         self.is_valid_date(self.__year, self.__month, value)
     #         self.__day = value

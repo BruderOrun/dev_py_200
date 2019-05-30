@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3842fef3-4038-486c-9174-8661682006cb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dev_py_200.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dev_py_200.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/py200_1_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Date.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Date.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practic_tow.py" beforeDir="false" afterPath="$PROJECT_DIR$/practic_tow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/py200_1_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/py200_1_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practic_tow.py" beforeDir="false" afterPath="$PROJECT_DIR$/dev_py_200_1.1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,24 +14,51 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/dev_py_200$practic_tow.coverage" NAME="practic_tow Coverage Results" MODIFIED="1559069893558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dev_py_200$practic_tow.coverage" NAME="practic_tow Coverage Results" MODIFIED="1559070863052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="py200_1_1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/py200_1_1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="151" column="11" lean-forward="true" selection-start-line="95" selection-end-line="151" selection-end-column="11" />
+            <state relative-caret-position="952">
+              <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="practic_tow.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/practic_tow.py">
+      <file leaf-file-name="py200_1_2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/py200_1_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="181" column="11" lean-forward="true" selection-start-line="181" selection-start-column="11" selection-end-line="181" selection-end-column="11" />
+            <state relative-caret-position="193">
+              <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Date.ipynb" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Downloads/Date.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dev_py_200_1.1.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev_py_200_1.1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1448">
+              <caret line="74" column="45" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="вц.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/вц.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -55,7 +79,11 @@
       <find>Date</find>
       <find>TypeError</find>
       <find>GlassDefaultListArg</find>
+      <find>next</find>
     </findStrings>
+    <replaceStrings>
+      <replace>&quot;</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,6 +94,9 @@
         <option value="$PROJECT_DIR$/practic_one.py" />
         <option value="$PROJECT_DIR$/py200_1_1.py" />
         <option value="$PROJECT_DIR$/practic_tow.py" />
+        <option value="$PROJECT_DIR$/dev_py_200_1.1.py" />
+        <option value="$PROJECT_DIR$/py200_1_2.py" />
+        <option value="$PROJECT_DIR$/вц.py" />
       </list>
     </option>
   </component>
@@ -151,7 +182,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/practic_tow.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dev_py_200_1.1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -190,8 +221,8 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4992057" weight="0.25934067" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32967034" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25178713" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32967034" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25178713" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -241,15 +272,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/py200_1_1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="151" column="11" lean-forward="true" selection-start-line="95" selection-end-line="151" selection-end-column="11" />
+        <state relative-caret-position="952">
+          <caret line="155" lean-forward="true" selection-start-line="155" selection-end-line="155" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/practic_tow.py">
+    <entry file="file://$USER_HOME$/Downloads/Date.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py200_1_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="181" column="11" lean-forward="true" selection-start-line="181" selection-start-column="11" selection-end-line="181" selection-end-column="11" />
+        <state relative-caret-position="193">
+          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev_py_200_1.1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1448">
+          <caret line="74" column="45" selection-start-line="74" selection-start-column="45" selection-end-line="74" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/вц.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
         </state>
       </provider>
     </entry>
