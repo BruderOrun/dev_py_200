@@ -182,15 +182,15 @@ class LinkedList:
         ...
         counter = 1
         if index == 0:
-            node.setNext(self.head)
+            node.set_next(self.head)
             self.head = node
 
         else:
             node = self.head
             while node.next is not None:
                 if counter == index:
-                    node.setNext(node.next)
-                    node.setNext(node)
+                    node.set_next(node.next)
+                    node.set_next(node)
                     return
                 node = node.next
                 counter = counter + 1
