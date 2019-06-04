@@ -15,17 +15,14 @@
 #    Обязательно проверяйте типы (TypeError) и значения переменных (ValueError)
 
 
-
 # 2. Создайте два и более объектов типа Glass
 #    Измените и добавьте в любой стакан любое кол-во воды (через атрибуты)
 #    Убедитесь, что у других объектов Glass атрибуты экземпляра класса не изменились.
 
 
-
 # 3. Создайте класс GlassDefaultArg (нужен только __init__) c аргументом occupied_volume
 #    По умолчанию occupied_volume равен нулю. Создайте два объекта с 0 и 200
 #    Обязательно проверяйте типы (TypeError) и значения переменных (ValueError)
-
 
 
 # 4. Создайте класс GlassDefaultListArg (нужен только __init__)
@@ -37,21 +34,16 @@
 #    Подсказка: можно ли использовать для аргументов по умолчанию изменяемые типы?
 
 
-
-
 # 5. Создайте класс GlassAddRemove, добавьте методы add_water, remove_water
 #    Обязательно проверяйте типы (TypeError) и значения переменных (ValueError)
 #    Вызовите методы add_water и remove.
 #    Убедитесь, что методы правильно изменяют атрибут occupied_volume.
 
 
-
 # 6. Создайте три объекта типа GlassAddRemove,
 #    вызовите функцию dir для трёх объектов и для класса GlassAddRemove.
 #    а. Получите типы объектов и класса
 #    б. Проверьте тип созданного объекта.
-
-
 
 
 # ---------------------------------------------------------------------------------------------
@@ -65,7 +57,6 @@
 
 # 8. Создайте три объекта Glass. (стр. 27)
 #    Получите id для каждого объекта с соответсвующим id переменной self.
-
 
 
 # 9. Корректно ли следующее объявление класса с точки зрения:
@@ -84,66 +75,82 @@
 
 # 10. Исправьте
 class A:
-	def __init__(self, a):
-		if 10 < a < 50:
-			return
-		self.a = a;
+    def __init__(self, a):
+        if 10 < a < 50:
+            return
+        self.a = a;
+
 
 # Объясните так реализовывать __init__ нельзя?
-
-
 
 
 # 11. Циклическая зависимость (стр. 39-44)
 # 
 
-class Node:
-    def __init__(self, prev=None, next_=None):
-        self.__prev = prev
-        self.__next = next_
-    def set_next(self, next_):
-        self.__next = next_
+import weakref
 
-    def set_prev(self, prev):
-        self.__prev = prev
-
-    def __str__(self):
-        ...
-
-    def __repr__(self):
-        ...
 
 class LinkedList:
+    class Node:
+        def __init__(self, prev=None, next_=None):
+            self.__prev = prev
+            self.__next = next_
 
+        def set_next(self, next_):
+            self.__next = next_
 
+        def get_next(self):
+            return self.__next
 
-    def insert(self, node, index=0):
+        def set_prev(self, prev):
+            self.__prev = prev
+            self.__prev = weakref
+
+        @property
+        def prev(self):
+            return self.__prev
+
+        @prev.setter
+        def prev(self):
+            self.__prev = weakref.ref(self.__prev)
+
+        def __str__(self):
+            ...
+
+        def __repr__(self):
+            ...
+
+    def __init__(self):
+        self.__head = Node()
+        self.__tail = Node(self.__head)
+        self.__head.set_next(self.__tail)
+
+    def insert(self, eliment, index=0):
         '''
         Insert Node to any place of LinkedList
         node - Node
         index - position of node
         '''
         ...
-        LinkedList.append(node)
 
-
-
-    def append(self, node):
+    def append(self, eliment):
         '''
         Append Node to tail of LinkedList
         node - Node
         '''
-        ...
+        self.__tail.set_prev(node)
+        node.get_next().set_prev(node)
+        self.__tail = node
 
     def clear(self):
         '''
         Clear LinkedList
         '''
-        ...
+        self.__head.set_next(self.__tail)
+        self.__tail.set_prev(self.__head)
 
     def find(self, node):
         ...
-
 
     def remove(self, node):
         ...
@@ -152,25 +159,6 @@ class LinkedList:
         ...
 
 
+l = LinkedList()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(l)
