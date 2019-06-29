@@ -1,15 +1,15 @@
 class FrontendCalc:
-    def __init__(self, num_1, num_2):
-        self.num_1 = num_1
-        self.num_2 = num_2
+    def __init__(self, A, B):
+        self.A = A
+        self.B = B
 
     @staticmethod
     def get_num():
-        num_1 = int(input('Enter first number: '))
-        num_2 = int(input('Enter second number: '))
-        if not (isinstance(num_1, (int, float)) and isinstance(num_2, (int, float))):
-            raise TypeError("num_1 and num_2 must be float")
-        return num_1, num_2
+        A = int(input('Enter first number: '))
+        B = int(input('Enter second number: '))
+        if not (isinstance(A, (int, float)) and isinstance(B, (int, float))):
+            raise TypeError("A and B must be float")
+        return A, B
 
     @staticmethod
     def get_operator():
@@ -18,63 +18,63 @@ class FrontendCalc:
 
     @classmethod
     def calc(cls):
-        num_1, num_2 = cls.get_num()
+        A, B = cls.get_num()
         operator = cls.get_operator()
         if operator == '+':
-            print(BackendCalc.test_add(cls, num_1, num_2))
+            print(BackendCalc.test_add(cls, A, B))
         elif operator == '-':
-            print(BackendCalc.test_sub(num_1, cls, num_2))
+            print(BackendCalc.test_sub(A, cls, B))
         elif operator == '*':
-            print(BackendCalc.test_mul(num_1, cls, num_2))
+            print(BackendCalc.test_mul(A, cls, B))
         elif operator == '/':
-            print(BackendCalc.test_div(num_1, cls, num_2))
+            print(BackendCalc.test_div(A, cls, B))
 
 
 class BackendCalc:
     frontends = {}
 
-    def __init__(self, num_1, num_2):
-        super().__init__(num_1, num_2)
+    def __init__(self, A, B):
+        super().__init__(A, B)
 
     @classmethod
-    def test_add(cls, frontend_type, num_1, num_2):
+    def test_add(cls, frontend_type, A, B):
         try:
             cls.frontends[frontend_type] += 1
         except:
             cls.frontends[frontend_type] = 1
-        if not (isinstance(num_1, (int, float)) and isinstance(num_2, (int, float))):
-            raise TypeError("num_1 and num_2 must be float")
-        return num_1 + num_2
+        if not (isinstance(A, (int, float)) and isinstance(B, (int, float))):
+            raise TypeError("A and B must be float")
+        return A + B
 
     @classmethod
-    def test_sub(cls, num_1, num_2, frontend_type):
+    def test_sub(cls, A, B, frontend_type):
         try:
             cls.frontends[frontend_type] += 1
         except:
             cls.frontends[frontend_type] = 1
-        if not (isinstance(num_1, (int, float)) and isinstance(num_2, (int, float))):
-            raise TypeError("num_1 and num_2 must be float")
-        return num_1 - num_2
+        if not (isinstance(A, (int, float)) and isinstance(B, (int, float))):
+            raise TypeError("A and B must be float")
+        return A - B
 
     @classmethod
-    def test_mul(cls, num_1, num_2, frontend_type):
+    def test_mul(cls, A, B, frontend_type):
         try:
             cls.frontends[frontend_type] += 1
         except:
             cls.frontends[frontend_type] = 1
-        if not (isinstance(num_1, (int, float)) and isinstance(num_2, (int, float))):
-            raise TypeError("num_1 and num_2 must be float")
-        return num_1 * num_2
+        if not (isinstance(A, (int, float)) and isinstance(B, (int, float))):
+            raise TypeError("A and B must be float")
+        return A * B
 
     @classmethod
-    def test_div(cls, num_1, num_2, frontend_type):
+    def test_div(cls, A, B, frontend_type):
         try:
             cls.frontends[frontend_type] += 1
         except:
             cls.frontends[frontend_type] = 1
-        if not (isinstance(num_1, (int, float)) and isinstance(num_2, (int, float))):
-            raise TypeError("num_1 and num_2 must be float")
-        return num_1 // num_2
+        if not (isinstance(A, (int, float)) and isinstance(B, (int, float))):
+            raise TypeError("A and B must be float")
+        return A // B
 
 act = FrontendCalc
 
